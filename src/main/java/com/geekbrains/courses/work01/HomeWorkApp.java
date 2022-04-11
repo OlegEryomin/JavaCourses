@@ -9,6 +9,9 @@ public class HomeWorkApp {
         printThreeWords("Apple");
 
         checkSumSign(5, 5);
+
+        printColor(100);
+
     }
 
     private static void printThreeWords(String fruit) {
@@ -20,6 +23,17 @@ public class HomeWorkApp {
             System.out.println("Сумма положительная");
         } else {
             System.out.println("Сумма отрицательная");
+        }
+    }
+
+    private static void printColor(int value) {
+
+        if (value <= 0) {
+            System.out.println("Красный");
+        } else if (value > 0 && value <= 100) {
+            System.out.println("Желтый");
+        } else if (value > 100) {
+            System.out.println("Зеленый");
         }
     }
 }
