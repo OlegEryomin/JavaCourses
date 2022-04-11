@@ -11,7 +11,7 @@ public class HomeWorkApp {
         checkSumSign(5, 5);
 
         printColor(100);
-
+        compareNumbers(5, 5);
     }
 
     private static void printThreeWords(String fruit) {
@@ -34,6 +34,15 @@ public class HomeWorkApp {
             System.out.println("Желтый");
         } else if (value > 100) {
             System.out.println("Зеленый");
+        }
+    }
+
+    private static void compareNumbers(int a, int b) {
+
+        if (a >= b) {
+            System.out.println("a >= b");
+        } else {
+            System.out.println("a < b");
         }
     }
 }
