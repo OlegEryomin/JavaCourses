@@ -24,6 +24,14 @@ public class HomeWorkApp {
         a = sc.nextInt();
         System.out.println(isNegativeNumber(a));
 
+        System.out.println("Задание 4:");
+        System.out.println("Введите строку:");
+        Scanner sc2 = new Scanner(System.in);
+        String s = sc2.nextLine();
+        System.out.println("Введите количество раз:");
+        a = sc.nextInt();
+        printStringCounter(s, a);
+
 
     }
 
@@ -41,9 +49,9 @@ public class HomeWorkApp {
         }
     }
 
-    /**
+    /** Метод печатает в консоль "Положительное" или "Отрицательное"
+     * в зависимости от контекста передаваемого параметра
      * @param a целое число
-     * @return String если a "Положительное" или "Отрицательное"
      */
     private static void isContextNumber(int a) {
         if (a >= 0) {
@@ -62,6 +70,16 @@ public class HomeWorkApp {
             return false;
         } else {
             return true;
+        }
+    }
+
+    /** Метод печатает переданную строку в консоль
+     * @param a Количество повторений печати
+     * @param s Строка которая будет напечатана
+     */
+    private static void printStringCounter(String s, int a) {
+        for (int i = 1; i <= a; i++) {
+            System.out.println(s);
         }
     }
 }
