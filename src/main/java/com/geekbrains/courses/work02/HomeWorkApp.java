@@ -17,12 +17,12 @@ public class HomeWorkApp {
         System.out.println("Задание 2:");
         System.out.println("Введите целое число:");
         a = sc.nextInt();
-        System.out.println(isContextNumber(a));
+        isContextNumber(a);
 
         System.out.println("Задание 3:");
         System.out.println("Введите целое число:");
         a = sc.nextInt();
-        System.out.println(isContextNumber(a));
+        System.out.println(isNegativeNumber(a));
 
 
     }
@@ -45,11 +45,11 @@ public class HomeWorkApp {
      * @param a целое число
      * @return String если a "Положительное" или "Отрицательное"
      */
-    private static String isContextNumber(int a) {
+    private static void isContextNumber(int a) {
         if (a >= 0) {
-            return "Положительное";
+            System.out.println("Положительное");
         } else {
-            return "Отрицательное";
+            System.out.println("Отрицательное");
         }
     }
 
