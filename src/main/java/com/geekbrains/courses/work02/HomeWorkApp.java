@@ -32,6 +32,11 @@ public class HomeWorkApp {
         a = sc.nextInt();
         printStringCounter(s, a);
 
+        System.out.println("Задание 5:");
+        System.out.println("Введите календарный год:");
+        a = sc.nextInt();
+        isLeapYear(a);
+
 
     }
 
@@ -81,5 +86,25 @@ public class HomeWorkApp {
         for (int i = 1; i <= a; i++) {
             System.out.println(s);
         }
+    }
+
+    /** Метод определения високостного года
+     * @param year календарный год
+     * @return true если год високостный
+     */
+    private static boolean isLeapYear(int year) {
+
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                return true;
+            }else {
+                return false;
+            }
+        } else if (year % 4 == 0){
+            return true;
+        }else {
+            return false;
+        }
+
     }
 }
