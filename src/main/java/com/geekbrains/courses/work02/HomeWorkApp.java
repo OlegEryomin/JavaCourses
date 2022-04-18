@@ -19,6 +19,11 @@ public class HomeWorkApp {
         a = sc.nextInt();
         System.out.println(isContextNumber(a));
 
+        System.out.println("Задание 3:");
+        System.out.println("Введите целое число:");
+        a = sc.nextInt();
+        System.out.println(isContextNumber(a));
+
 
     }
 
@@ -45,6 +50,18 @@ public class HomeWorkApp {
             return "Положительное";
         } else {
             return "Отрицательное";
+        }
+    }
+
+    /**
+     * @param a целое число
+     * @return true если a "Отрицательное"
+     */
+    private static boolean isNegativeNumber(int a) {
+        if (a >= 0) {
+            return false;
+        } else {
+            return true;
         }
     }
 }
