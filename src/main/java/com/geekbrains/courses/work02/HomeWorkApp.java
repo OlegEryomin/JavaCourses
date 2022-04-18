@@ -1,9 +1,19 @@
 package com.geekbrains.courses.work02;
 
+import java.util.Scanner;
+
 public class HomeWorkApp {
 
     public static void main(String[] args) {
-        System.out.println(isSumLimitTenBeforeTwenty(1, 5));
+
+        System.out.println("Задание 1:");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите первое число:");
+        int a = sc.nextInt();
+        System.out.println("Введите второе число:");
+        int b = sc.nextInt();
+        System.out.println(isSumLimitTenBeforeTwenty(a, b));
+
     }
 
     /**
