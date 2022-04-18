@@ -14,6 +14,12 @@ public class HomeWorkApp {
         int b = sc.nextInt();
         System.out.println(isSumLimitTenBeforeTwenty(a, b));
 
+        System.out.println("Задание 2:");
+        System.out.println("Введите целое число:");
+        a = sc.nextInt();
+        System.out.println(isContextNumber(a));
+
+
     }
 
     /**
@@ -27,6 +33,18 @@ public class HomeWorkApp {
             return true;
         }  else {
             return false;
+        }
+    }
+
+    /**
+     * @param a целое число
+     * @return String если a "Положительное" или "Отрицательное"
+     */
+    private static String isContextNumber(int a) {
+        if (a >= 0) {
+            return "Положительное";
+        } else {
+            return "Отрицательное";
         }
     }
 }
