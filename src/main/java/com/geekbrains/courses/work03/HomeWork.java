@@ -21,6 +21,9 @@ public class HomeWork {
         System.out.println("Задание 4");
         int[][] arrayFour = diagonalFilling(5);
 
+        System.out.println("Задание 5");
+        int[] arrayFive = five(5, 2);
+
     }
 
     /** Метод производит замену элементов массива с 0 на 1 и наоборот
@@ -92,6 +95,15 @@ public class HomeWork {
             System.out.println();
         }
 
+        return array;
+    }
+
+    private static int[] five(int len, int initialValue) {
+        int[] array = new int[len];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = initialValue;
+            System.out.print("[" + array[i] + "] ");
+        }
         return array;
     }
 }
