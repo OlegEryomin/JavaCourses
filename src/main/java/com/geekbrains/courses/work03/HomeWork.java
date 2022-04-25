@@ -8,6 +8,7 @@ public class HomeWork {
         int[] array = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
         array = replacement(array);
 
+        int[] arrayTwo = fellingInOrder(10);
 
     }
 
@@ -23,6 +24,21 @@ public class HomeWork {
                 array[i] = 0;
             }
         }
+        return array;
+    }
+
+    /**
+     *
+     * @param size Размерность массива
+     * @return Целочисленный массив заполненный цифрами по порядку
+     */
+    private static int[] fellingInOrder(int size) {
+        int[] array = new int[size];
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i + 1;
+        }
+
         return array;
     }
 }
