@@ -23,6 +23,12 @@ public class HomeWork {
 
         System.out.println("Задание 5");
         int[] arrayFive = five(5, 2);
+        System.out.println();
+
+        System.out.println("Задание 6");
+
+        System.out.println("Минимум  = " + serchMin(arrayThree));
+        System.out.println("Максимум = " + serchMax(arrayThree));
 
     }
 
@@ -98,6 +104,11 @@ public class HomeWork {
         return array;
     }
 
+    /**
+     * @param len Размерность массива
+     * @param initialValue значение для записи в ячейки
+     * @return Массив initialValue
+     */
     private static int[] five(int len, int initialValue) {
         int[] array = new int[len];
         for (int i = 0; i < array.length; i++) {
@@ -105,5 +116,33 @@ public class HomeWork {
             System.out.print("[" + array[i] + "] ");
         }
         return array;
+    }
+
+    /**
+     * @param array Целочисленный массив
+     * @return минимальный элемент передаваемого массива
+     */
+    private static int serchMin(int[] array){
+        int min = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (min >= array[i]) {
+               min = array[i];
+            }
+        }
+        return min;
+    }
+
+    /**
+     * @param array Целочисленный массив
+     * @return максимальный элемент передаваемого массива
+     */
+    private static int serchMax(int[] array){
+        int max = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (max <= array[i]) {
+                max = array[i];
+            }
+        }
+        return max;
     }
 }
