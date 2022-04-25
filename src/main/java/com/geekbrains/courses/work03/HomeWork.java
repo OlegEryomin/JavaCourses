@@ -26,13 +26,18 @@ public class HomeWork {
         System.out.println();
 
         System.out.println("Задание 6");
-
         System.out.println("Минимум  = " + serchMin(arrayThree));
         System.out.println("Максимум = " + serchMax(arrayThree));
 
+        System.out.println("Задание 7");
+        int[] arraySeven = {2, 2, 2, 1, 2, 2, 10, 1};
+        System.out.println(checkBalance(arraySeven));
+
     }
 
-    /** Метод производит замену элементов массива с 0 на 1 и наоборот
+    /**
+     * Метод производит замену элементов массива с 0 на 1 и наоборот
+     *
      * @param array Массив нулей и едениц
      * @return Массив с заменой 0 на 1 и наоборот
      */
@@ -49,7 +54,6 @@ public class HomeWork {
     }
 
     /**
-     *
      * @param size Размерность массива
      * @return Целочисленный массив заполненный цифрами по порядку
      */
@@ -64,7 +68,9 @@ public class HomeWork {
         return array;
     }
 
-    /** Метод умножает на 2 если элемент массива меньше 6
+    /**
+     * Метод умножает на 2 если элемент массива меньше 6
+     *
      * @param array Целочисленный массив
      * @return исходный массив с заменой всех элементов меньше 6
      */
@@ -105,7 +111,7 @@ public class HomeWork {
     }
 
     /**
-     * @param len Размерность массива
+     * @param len          Размерность массива
      * @param initialValue значение для записи в ячейки
      * @return Массив initialValue
      */
@@ -122,11 +128,11 @@ public class HomeWork {
      * @param array Целочисленный массив
      * @return минимальный элемент передаваемого массива
      */
-    private static int serchMin(int[] array){
+    private static int serchMin(int[] array) {
         int min = array[0];
         for (int i = 0; i < array.length; i++) {
             if (min >= array[i]) {
-               min = array[i];
+                min = array[i];
             }
         }
         return min;
@@ -136,7 +142,7 @@ public class HomeWork {
      * @param array Целочисленный массив
      * @return максимальный элемент передаваемого массива
      */
-    private static int serchMax(int[] array){
+    private static int serchMax(int[] array) {
         int max = array[0];
         for (int i = 0; i < array.length; i++) {
             if (max <= array[i]) {
@@ -144,5 +150,27 @@ public class HomeWork {
             }
         }
         return max;
+    }
+
+    /**
+     * @param array целочисленный массив
+     * @return true если в массиве есть место, в котором сумма левой и правой части
+     * массива равны
+     */
+    private static boolean checkBalance(int[] array) {
+        int left = 0;
+        int right = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            left = left + array[i];
+            for (int j = i+1; j < array.length; j++){
+                right = right + array[j];
+            }
+            if (left == right) {
+                return true;
+            }
+            right = 0;
+        }
+        return false;
     }
 }
