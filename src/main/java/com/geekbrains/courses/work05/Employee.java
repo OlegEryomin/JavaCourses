@@ -30,6 +30,10 @@ public class Employee {
                 '}';
     }
 
+    public void outputConsole() {
+        System.out.println(toString());
+    }
+
 
 }
 

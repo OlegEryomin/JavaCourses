@@ -11,7 +11,7 @@ public class Main {
                                     "+7-920-555-55-55",
                                     new BigDecimal(5000), 21);
 
-        System.out.println(em.toString());
+        em.outputConsole();
 
         Employee[] employees = new Employee[5];
         employees[0] = new Employee("Eryomin Oleg Aleksandrovich",
@@ -39,9 +39,10 @@ public class Main {
                                     "glazkov@ya.ru",
                                     "+7-920-555-55-59",
                                     new BigDecimal(5000), 22);
+
         for (int i =0; i < employees.length; i++) {
             if (employees[i].age > 40) {
-                System.out.println(employees[i].toString());
+               employees[i].outputConsole();
             }
         }
     }
