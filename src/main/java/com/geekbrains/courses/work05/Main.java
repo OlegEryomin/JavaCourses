@@ -28,16 +28,23 @@ public class Main {
                                     "sheriff",
                                     "2121312@ya.ru",
                                     "+7-920-555-55-57",
-                                    new BigDecimal(1000), 21);
+                                    new BigDecimal(1000), 45);
         employees[3] = new Employee("Nechaev Vlad Aleksandrovich",
                                     "security guard",
                                     "nechaev@ya.ru",
                                     "+7-920-555-55-58",
-                                    new BigDecimal(1000), 20);
+                                    new BigDecimal(1000), 50);
         employees[4] = new Employee("Glazkov Roman Aleksandrovich",
                                     "engineer",
                                     "glazkov@ya.ru",
                                     "+7-920-555-55-59",
                                     new BigDecimal(5000), 22);
+        for (int i =0; i < employees.length; i++) {
+            if (employees[i].age > 40) {
+                System.out.println(employees[i].toString());
+            }
+        }
     }
+
+
 }
