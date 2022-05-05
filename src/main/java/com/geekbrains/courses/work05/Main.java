@@ -40,9 +40,9 @@ public class Main {
                                     "+7-920-555-55-59",
                                     new BigDecimal(5000), 22);
 
-        for (int i =0; i < employees.length; i++) {
-            if (employees[i].age > 40) {
-               employees[i].outputConsole();
+        for (Employee employee : employees) {
+            if (employee.getAge() > 40) {
+                employee.outputConsole();
             }
         }
     }
