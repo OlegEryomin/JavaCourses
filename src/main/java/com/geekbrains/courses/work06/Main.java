@@ -1,19 +1,24 @@
 package com.geekbrains.courses.work06;
 
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
-        Cat catBarsik = new Cat("Барсик", 5);
-        catBarsik.run(50);
-       // catBarsik.swim(2);
 
-        Dog dogSharik = new Dog("Шарик", 10);
-        dogSharik.run(50);
-        dogSharik.swim(2);
+        Animal[] animals = {
+                new Cat("Барсик"),
+                new Cat("Мурзик"),
+                new Dog("Шарик"),
+                new Dog("Бобик")
+        };
 
-        Dog dogHotdog = new Dog("Хотдог", 10);
-        dogHotdog.run(500);
-        dogHotdog.swim(500);
-
+        final Random random = new Random();
+        for (Animal animal : animals) {
+            int randomRunDistanceMeter = random.nextInt(600);
+            int randomSwimDistanceMeter = random.nextInt(20);
+            animal.run(randomRunDistanceMeter);
+            animal.swim(randomSwimDistanceMeter);
+        }
 
         System.out.println("Количество собак - " + Dog.getCountDog());
         System.out.println("Количество кошек - " + Cat.getCountCat());
