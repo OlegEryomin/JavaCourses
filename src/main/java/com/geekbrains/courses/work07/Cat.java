@@ -3,11 +3,16 @@ package com.geekbrains.courses.work07;
 public class Cat {
     private String name;
     private int appetite;
-    private boolean satiety = false;
+    private boolean satiety;
 
     public Cat(String name, int appetite) {
         this.name = name;
         this.appetite = appetite;
+        this.satiety = false;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public boolean isSatiety() {
@@ -23,9 +28,11 @@ public class Cat {
             if (food < appetite){
                 int flaw = appetite - food;
                 System.out.println("В миске не хватает " + flaw  + " еды");
+                satiety = false;
             } else {
-                p.decreaseFood(appetite);
                 satiety = true;
+                p.decreaseFood(appetite);
+
             }
 
         }

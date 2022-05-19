@@ -2,11 +2,21 @@ package com.geekbrains.courses.work07;
 
 public class MainClass {
     public static void main(String[] args) {
-        Cat cat = new Cat("Barsik", 200);
+
         Plate plate = new Plate(100);
-        plate.info();
-        cat.eat(plate);
-        plate.info();
-        System.out.println(cat.isSatiety());
+
+        Cat[] cats = {
+          new Cat("Barsik", 20),
+          new Cat("Felix",  50),
+          new Cat("Murzik", 40)
+        };
+
+        for (Cat cat : cats) {
+            plate.info();
+            cat.eat(plate);
+            System.out.println("Satiety " + cat.getName() + " " + cat.isSatiety());
+            plate.info();
+        }
+
     }
 }
