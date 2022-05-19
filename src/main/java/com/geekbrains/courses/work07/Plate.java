@@ -8,19 +8,9 @@ public class Plate {
     }
 
     public void decreaseFood(int n) {
-        if (food <= 0){
-            System.out.println("В тарелке закончилась еда");
-        }else {
-            if (food < n) {
-                int remainder = n - food;
-                System.out.println("Съедено: " + food + " еды, нехватило " + remainder);
-                food = 0;
-            }else {
-                food = food - n;
-            }
-        }
-
+        food = food - n;
     }
+
     public void info() {
         System.out.println("plate: " + food);
     }
@@ -29,8 +19,5 @@ public class Plate {
         return food;
     }
 
-    public void setFood(int food) {
-        this.food = food;
-    }
 
 }
