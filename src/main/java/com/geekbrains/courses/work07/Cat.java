@@ -32,12 +32,13 @@ public class Cat {
             } else {
                 satiety = true;
                 p.decreaseFood(appetite);
-
             }
-
         }
-
-
     }
+
+    public void addEat(int appetite) {
+        this.appetite = this.appetite + appetite;
+    }
+
 
 }
