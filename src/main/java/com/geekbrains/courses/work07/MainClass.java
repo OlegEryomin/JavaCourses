@@ -7,5 +7,6 @@ public class MainClass {
         plate.info();
         cat.eat(plate);
         plate.info();
+        System.out.println(cat.isSatiety());
     }
 }

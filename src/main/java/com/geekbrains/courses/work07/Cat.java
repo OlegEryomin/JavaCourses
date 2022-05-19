@@ -21,10 +21,8 @@ public class Cat {
             satiety = false;
         } else {
             if (food < appetite){
-                p.decreaseFood(food);
-                appetite = appetite - food;
-                satiety = false;
-                System.out.println("Седено " + food + " еды, требовать еще " + appetite + " еды");
+                int flaw = appetite - food;
+                System.out.println("В миске не хватает " + flaw  + " еды");
             } else {
                 p.decreaseFood(appetite);
                 satiety = true;
