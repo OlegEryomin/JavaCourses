@@ -1,6 +1,6 @@
 package com.geekbrains.courses.work09;
 
 public interface Entity {
-    void run();
-    void jump();
+    boolean run(double distanceMetr);
+    boolean jump(double heightMetr);
 }
