@@ -1,9 +1,6 @@
 package com.geekbrains.courses.work10;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,6 +28,29 @@ public class Main {
             }
             System.out.println("Встречается: " + i + " раз(а)");
         }
+
+        ///////////////Задание 2
+        PhoneBook phoneBook = new PhoneBook();
+        Contact contact = new Contact("Гальцев");
+        contact.phoneAdd("2254");
+        contact.phoneAdd("2253");
+        phoneBook.add(contact);
+
+        Contact contact2 = new Contact("Шубин");
+        contact2.phoneAdd("2379");
+        contact2.phoneAdd("2378");
+        phoneBook.add(contact2);
+
+        Contact contact3 = new Contact("Еремин");
+        contact3.phoneAdd("5555");
+        contact3.phoneAdd("4444");
+        phoneBook.add(contact3);
+
+        System.out.println(phoneBook);
+        System.out.println(phoneBook.get("Шубин"));
+
+
+
 
     }
 }
