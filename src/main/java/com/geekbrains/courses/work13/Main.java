@@ -51,9 +51,18 @@ public class Main {
         );
         thread2.start();
 
-        System.arraycopy(a1, 0, arr, 0, h);
-        System.arraycopy(a2, 0, arr, h, h);
+        try {
+            thread1.join();
+            thread2.join();
 
-        System.out.println("Метод 2: " + (System.currentTimeMillis() - a));
+            System.arraycopy(a1, 0, arr, 0, h);
+            System.arraycopy(a2, 0, arr, h, h);
+
+            System.out.println("Метод 2: " + (System.currentTimeMillis() - a));
+
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
